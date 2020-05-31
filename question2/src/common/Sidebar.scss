@@ -1,0 +1,21 @@
+header.ant-layout-header {
+  background: #ffffff;
+}
+.logo {
+  width: 136px;
+  height: 31px;
+  background-image: url("https://s3-us-west-2.amazonaws.com/hiq-web-images/cdn_media/marketing/logo/logo-healthiq-color.svg");
+  margin: 16px 24px 16px 0;
+  float: left;
+}
+
+.ant-menu-item a svg {
+  margin: 0 6px -1px 0;
+}
+
+.uuid {
+  float: right;
+  font-size: 33px;
+  margin: 0 21px;
+  color: #33979b;
+}

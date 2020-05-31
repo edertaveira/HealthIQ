@@ -1,46 +1,29 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
+import React from "react";
+import PropTypes from "prop-types";
 
-class PoorlyWrittenTodoList extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      highlightedItems: props.todos.map(t => t.isHighlighted)
-    };
-  }
-  render() {
-    const { todos, onHighlight } = this.props;
-    const activeTodos = todos.filter(t => t.isActive);
-    return (
-      <div>
-        { activeTodos.map((t, idx) => (
-          <div>
-            <h1>To Do List</h1>
-            <ul>
-              { t.items.map(i => (
-                <li>
-                  { i }
-                </li>
-              )) }
-            </ul>
-            <button onClick={() => {
-              const h = this.state.highlightedItems;
-              h[idx] = !h[idx];
-              this.setState({
-                highlightedItems: h
-              });
-              onHighlight(idx);
-            }}>
-              { this.state.highlightedItems[idx] ? 'Unhighlight' : 'Highlight' }
-            </button>
-          </div>
-        )) }
-      </div>
-    );
-  }
-}
+const PoorlyWrittenTodoList = ({ todos, onHighlight }) => {
+  return (
+    <div>
+      <h1>To Do List</h1>
+      {todos &&
+        todos
+          .filter((t) => t.isActive)
+          .map((t, idx) => (
+            <div key={idx}>
+              <h1>{t.name}</h1>
+              <ul>
+                {t.items.map((i) => (
+                  <li key={i}>{i}</li>
+                ))}
+              </ul>
+              <button onClick={() => onHighlight(t.id)}>{t.isHighlighted ? "Unhighlight" : "Highlight"}</button>
+            </div>
+          ))}
+    </div>
+  );
+};
 PoorlyWrittenTodoList.propTypes = {
-  todos: PropTypes.array,
-  onHighlight: PropTypes.func
+  todos: PropTypes.array.isRequired,
+  onHighlight: PropTypes.func.isRequired,
 };
 export default PoorlyWrittenTodoList;

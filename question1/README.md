@@ -59,7 +59,7 @@ export default PoorlyWrittenTodoList;
 import React from "react";
 import PropTypes from "prop-types";
 
-const PoorlyWrittenTodoList = ({ todos, onHighlight }) => {
+const TodoList = ({ todos, onHighlight }) => {
   return (
     <div>
       <h1>To Do List</h1>
@@ -80,11 +80,11 @@ const PoorlyWrittenTodoList = ({ todos, onHighlight }) => {
     </div>
   );
 };
-PoorlyWrittenTodoList.propTypes = {
+TodoList.propTypes = {
   todos: PropTypes.array.isRequired,
   onHighlight: PropTypes.func.isRequired,
 };
-export default PoorlyWrittenTodoList;
+export default TodoList;
 ```
 
 ### Explaning
@@ -109,7 +109,7 @@ const onHighlight = (id) => {
 - Proptypes as required
 
 ```
-PoorlyWrittenTodoList.propTypes = {
+TodoList.propTypes = {
   todos: PropTypes.array.isRequired,
   onHighlight: PropTypes.func.isRequired,
 };

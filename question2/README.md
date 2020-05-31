@@ -1,78 +1,71 @@
-# Marvel Cards
+# Question 2
 
-Este projeto é um web app que lista cards da Marvel possibilitando busca por nome e detalha cada personagem mostrando as Séries vinculadas a ele.
+Create a react app that displays a list of posts from the specified REST API. Each post should display the title and body of the post, and username and city of the User that created it. When a client visits the page, the app should generate a random number that becomes the Client Id. The Client Id should be saved in browser local storage, unless an Id already exists. Bonus points for saving the API data in browser local storage and retrieving it on a subsequent visit.
 
-Você pode ver o projeto rodando em modo produção aqui: [https://marvelchallenge.herokuapp.com/](https://marvelchallenge.herokuapp.com/)
+Notes
+Feel free to start with create-react-app to save time setting up
+
+Backend APIs
+https://jsonplaceholder.typicode.com/posts
+https://jsonplaceholder.typicode.com/users
+
 
 ## Screenshots
-![nav](./docs/nav.gif)
 
-## Bibliotecas utilizadas
 
-- axios - Usada para acessar as APIs.
-- react-helmet - gerenciamento de SEO.
-- moment - Lidar com datas e/ou timestamps.
-- react-loadable - Carregamento de páginas assincronas.
-- redux - Gerenciamento de status a nível global.
-- redux-persist - Midleware para gerenciar o redux.
-- react-router-dom - Gerenciar Rotas e navegação em nossa aplicação.
-- react-highlight-words - Melhor experiência visual na busca marcando a palavra buscada nos resultados.
-- md5 - Em virtude da API da marvel necessitar do codigo md5 da concatenação das chaves e timestamp.
-- react-icons - obter opções de icons.
-- jest - Testes Unitários.
-- chai - Prover melhor experiência nos testes unitários.
-- enzyme - Ter maior opções nos testes.
+## Libraries
+
+- axios - Used to do html requests
+- react-helmet - SEO handling.
+- react-loadable - Asyncronous loading.
+- redux - Global State handling.
+- redux-persist - Redux Midleware.
+- react-router-dom - Managing Routes.
+- react-highlight-words - To Highlight search word.
+- md5 - To generate the cliente ID.
+- react-icons - Icons.
+- jest - Unit Tests.
+- chai - Unit Tests.
 
 ## Getting Started
 
-1. Obter as credenciais na [API da Marvel](https://developer.marvel.com/documentation/getting_started)
-2. Configurar as variáveis de ambiente:
 
-- _REACT_APP_private_key_
-- _REACT_APP_public_key_
-- _NODE_ENV_
+### Prerequisites
 
-### Prerequisitos
+NodeJS/npm previously installed.
 
-1. NodeJS/npm previamente instalado.
+### Dependences
 
-### Instalando as dependências
+```$ yarn ``` ou ```$ npm install ```
 
-```
-yarn
-```
+### Steps
+1. ```$ git clone https://github.com/edertaveira/HealthIQ.git ```
+2. ```$ cd  HealthIQ/question2```
+3. ```$ yarn start```
 
-ou
+## Tests
 
 ```
-npm install
+$ yarn test
 ```
 
-## Rodando os Testes
+![testes](./docs/tests.png)
+
+## Running
 
 ```
-yarn test
-```
-### Você verá algo como:
-
-![testes](./docs/testes.png)
-
-## Rodando o projeto
-
-```
-yarn start
+$ yarn start
 ```
 
-## Construído com
+## Built with
 
-- [ReactJS](https://pt-br.reactjs.org/) - Biblioteca Front-end.
-- [Ant Design](https://ant.design/) - React UI library utilizado.
-- [API Marvel](https://developer.marvel.com/docs) - API da marvel.
+- [ReactJS](https://pt-br.reactjs.org/)
+- [Ant Design](https://ant.design/) - React UI.
 
 ## Autor
 
 - **Eder Taveira** - [edertaveira](https://github.com/edertaveira)
 
-## Licença
+## Licence
 
-Este projeto pertence à [Squadra Tecnologia](https://www.squadra.com.br/).
+This project is powered by [Health IQ](https://healthiq.com)

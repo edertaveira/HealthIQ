@@ -5,14 +5,13 @@ const PoorlyWrittenTodoList = ({ todos, onHighlight }) => {
   return (
     <div>
       <h1>To Do List</h1>
-      {todos &&
-        todos
+      {todos
           .filter((t) => t.isActive)
           .map((t, idx) => (
             <div key={idx}>
               <h1>{t.name}</h1>
               <ul>
-                {t.items.map((i) => (
+                {t.items && t.items.map((i) => (
                   <li key={i}>{i}</li>
                 ))}
               </ul>
